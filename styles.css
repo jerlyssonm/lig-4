@@ -1,0 +1,143 @@
+body, header, aside, div, main,p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: #5cffff;
+    font-family: 'Alfa Slab One', cursive;
+}
+header{
+    font-size: 40px;
+}
+aside{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 175px;
+    margin: 15px auto;
+}
+p{
+    font-size: 25px;
+}
+main{
+    display: flex;
+    width: 320px;
+    height: 245px;
+    background: #142FCB;
+    border-radius: 5%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 28px 8px rgb(0 0 0 / 74%);
+    align-items: center;
+    justify-content: center;
+}
+main p{
+    color: #10C0C0;
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.coluna{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.espaco {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #10C0C0;
+}
+
+.disco {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    animation: drop .5s forwards cubic-bezier(0, 0.01, 0, 0.56);
+    transform: translateY(-400px);
+}
+.disco2{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+
+.preto {
+    background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(252,0,0,1) 100%);
+
+}
+
+.vermelho {
+    background: rgb(252,0,0);
+    background: radial-gradient(circle, rgba(252,0,0,1) 0%, rgba(0,0,0,1) 100%);
+
+}
+.pontos_vermelho, .pontos_preto{
+    position: absolute;
+    margin-top: 30px;
+}
+.hidden{
+    display: none;
+}
+.fadeIn{
+    transform: translateX(-800px);
+    animation: fadeIn .5s ease-in-out forwards;
+}
+.restart{
+    margin-top: 25px;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    font-family: 'Alfa Slab One', cursive;
+    animation: fadeIn 1s ease-in-out;
+    color: #10C0C0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    border-radius: 10px;
+    background-color: #142FCB;
+    border: none;
+    box-shadow: 10px 10px 28px 8px rgb(0 0 0 / 74%);
+    cursor: pointer;
+    position: relative;
+    
+}
+.restart:active{
+    transform: translateY(4px);
+}
+.container_jogadores{
+    display: flex;
+    justify-content: space-around;
+    width: 320px;
+    margin: 10px auto;
+}
+.jodador{
+    display: flex;
+    width: 110px;
+    justify-content: space-around;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; 
+           transform: translateX(0px);
+    }
+    }
+@keyframes drop {
+    to{
+        transform: translateY(0px);
+    }
+}
+@media only screen and (min-width: 600px) {
+    body{
+        color: bisque;
+        background-image: url("./img/bkg.svg");
+    }
+}
